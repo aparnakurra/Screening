@@ -64,13 +64,13 @@ By leveraging AWS security tools and services, the organization can significantl
 
 
 # Part2: Container Security Implementation
-## Task1:Five Docker Security Best Practices:
+## Task1: Five Docker Security Best Practices:
 
 * **Use Official and Trusted Images:** Always use official images from Docker Hub or other trusted sources. These images are maintained and regularly updated to ensure security.
 * **Run Containers as Non-Root User:** Running containers as a non-root user minimizes the impact of a container compromise, preventing the attacker from gaining root access to the host system.
 * **Keep Images Minimal:** Use minimal base images to reduce the attack surface. Smaller images have fewer components that could potentially be exploited.
 * **Scan Images for Vulnerabilities:** Regularly scan Docker images for vulnerabilities using tools like Docker's built-in scanning tool or third-party solutions like Clair or Trivy.
-* **Use Docker Content Trust (DCT):**Enable Docker Content Trust to ensure the integrity and authenticity of images by signing and verifying them.
+* **Use Docker Content Trust (DCT):** Enable Docker Content Trust to ensure the integrity and authenticity of images by signing and verifying them.
 
 [here](https://github.com/aparnakurra/Screening/blob/Dockerfile) Implementation in a Dockerfile:
 
@@ -81,15 +81,14 @@ By leveraging AWS security tools and services, the organization can significantl
 [here](https://github.com/aparnakurra/Screening/blob/src/k8s.yaml) Kubernetes YAML Configuration 
 
 ## Task3: IaaS Security Measures
-**Concept of Infrastructure as a Service (IaaS) and Its Security Implications:**
+Concept of Infrastructure as a Service (IaaS) and Its Security Implications
 
 * Infrastructure as a Service (IaaS) is a cloud computing model that provides virtualized computing resources over the internet. IaaS offers scalable and automated computing environments, where users can rent virtual machines (VMs), storage, and networking resources on demand. This allows organizations to avoid the cost and complexity of purchasing and managing physical servers and data center infrastructure.
 * In IaaS, the cloud provider is responsible for the security of the underlying infrastructure (e.g., physical servers, storage, and networking), while the user is responsible for securing the data, applications, and operating systems they run on the IaaS platform. This shared responsibility model requires users to be vigilant about their security practices, including configuring firewalls, managing access controls, and securing data.
-Access Management:
 * Managing access to IaaS resources is crucial. Using AWS IAM, users can define who has access to specific resources and what actions they can perform. Implementing the principle of least privilege ensures that users have only the permissions necessary to perform their tasks, reducing the risk of unauthorized access.
-Data Security:
 * In an IaaS environment, data security involves encrypting data at rest and in transit. AWS offers services like AWS Key Management Service (KMS) for managing encryption keys, and Amazon S3 provides server-side encryption for data stored in S3 buckets. Users must ensure that sensitive data is encrypted and that encryption keys are managed securely.
 * Securing the network in an IaaS environment involves configuring Virtual Private Clouds (VPCs), security groups, and network access control lists (ACLs) to control inbound and outbound traffic. AWS VPC enables users to create isolated networks and define security rules to protect their instances from unauthorized access.
+
 By understanding and implementing these security measures, organizations can effectively secure their IaaS environments and protect their data and applications from potential threats.
 
 # Part3: CI/CD Pipeline Setup
