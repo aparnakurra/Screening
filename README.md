@@ -72,13 +72,14 @@ By leveraging AWS security tools and services, the organization can significantl
 * **Scan Images for Vulnerabilities:** Regularly scan Docker images for vulnerabilities using tools like Docker's built-in scanning tool or third-party solutions like Clair or Trivy.
 * **Use Docker Content Trust (DCT):** Enable Docker Content Trust to ensure the integrity and authenticity of images by signing and verifying them.
 
-[here](https://github.com/aparnakurra/Screening/blob/Dockerfile) Implementation in a Dockerfile:
+Checkout [here](https://github.com/aparnakurra/Screening/blob/main/Dockerfile) for implementation of Dockerfile
 
 ## Task2: Kubernetes Security Configuration 
 * **Role-Based Access Control (RBAC):** RBAC allows you to define permissions and access controls within your Kubernetes cluster. You can specify what actions users or applications can perform, reducing the risk of unauthorized access.
 * **Network Policies:** Network Policies allow you to control the communication between pods within a Kubernetes cluster. By defining which pods can communicate with each other, you can isolate applications and limit the spread of potential breaches.
 * **Pod Security Policies (PSP):** Pod Security Policies define a set of conditions that a pod must meet to be accepted into the cluster. This includes restricting privileged operations, enforcing read-only root filesystems, and setting user IDs.
-[here](https://github.com/aparnakurra/Screening/blob/src/k8s.yaml) Kubernetes YAML Configuration 
+
+Checkout [here](https://github.com/aparnakurra/Screening/blob/main/src/k8s.yaml) for Kubernetes YAML Configuration 
 
 ## Task3: IaaS Security Measures
 Concept of Infrastructure as a Service (IaaS) and Its Security Implications
@@ -93,7 +94,11 @@ By understanding and implementing these security measures, organizations can eff
 
 # Part3: CI/CD Pipeline Setup
 ## Task1: Configuration Management with Terraform
-In  this task I'll use Terraform to automate the deployment of a web server on a virtual machine. here [code](https://github.com/aparnakurra/Screening/blob/src/web.tf) will show how to create an EC2 instance in AWS and install a simple web server (Nginx) on it.
+In  this task I'll use Terraform to automate the deployment of a web server on a virtual machine. 
+
+Checkout [here](https://github.com/aparnakurra/Screening/blob/main/src/web.tf) on how to create an EC2 instance in AWS and install a simple web server (Nginx) on it.
 
 ## Task2: CI/CD Pipeline Configuration
-This task I'll use Jenkins pipeline configuration, checkout [here](https://github.com/aparnakurra/Screening/blob/Jenkinsfile) 
+This task I'll use Jenkins pipeline configuration
+
+checkout [here](https://github.com/aparnakurra/Screening/blob/main/Jenkinsfile) 
