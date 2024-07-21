@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: secure-pod
+spec:
+  containers:
+  - name: secure-container
+    image: alpine:3.12
+    command: ["sleep", "3600"]
+    securityContext:
+      runAsUser: 1000      # Run as non-root user with UID 1000
+      runAsGroup: 3000     # Run as part of group with GID 3000
+      readOnlyRootFilesystem: true  # Ensure the root filesystem is read-only
+      allowPrivilegeEscalation: false  # Disable privilege escalation
+  securityContext:
+    fsGroup: 2000  # Set the filesystem group for shared volumes
